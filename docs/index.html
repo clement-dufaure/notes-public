@@ -8,7 +8,7 @@
 	<script type="text/javascript"
 		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
 
-	<title>Projet stat</title>
+	<title>ACP</title>
 
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/reveal.css">
@@ -33,7 +33,7 @@
 			<!-- <section data-markdown="correlation.md" data-separator-vertical="^(\r?\n){4,}$">
 			</section> -->
 			<section>
-				<h1>Notations et calcul</h1>
+				<h1>Notations</h1>
 
 				`Y` Données centrées<br />
 
@@ -67,6 +67,24 @@
 			</section>
 
 			<section>
+				<h2>ACP non normée</h2>
+
+				<ul>
+					<li>
+						Données : `Y`</li>
+					<li> Métrique : `I_3`</li>
+					<li>Matrice d'inertie : `V`</li>
+					<li>Distances : `y_i^Ty_i`
+						$$
+						= 1 \times y_{i,math}^2 + 1 \times y_{i,musique}^2 +
+						1 \times
+						y_{i,français}^2
+						$$
+					</li>
+				</ul>
+			</section>
+			
+			<section>
 				<h1>ACP normée</h1>
 			</section>
 
@@ -74,18 +92,15 @@
 				<h2>Point de vue métrique inverse des variances</h2>
 
 				<ul>
-					<li>
-						Données : `Y`</li>
-					<li> Métrique : `M_{IV}`</li>
+					<li>Données : `Y`</li>
+					<li>Métrique : `M_{IV}`</li>
 					<li>Matrice d'inertie : `Y^TPYM_{IV}`
 						$$
 						=
 						\begin{pmatrix}
-						y_1^{math}/\sigma^2_{math} & y_1^{musique}/\sigma^2_{musique}&
-						y_1^{francais}/\sigma^2_{francais} \\
-						y_2^{math}/\sigma^2_{math} & y_2^{musique}/\sigma^2_{musique}&
-						y_2^{francais}/\sigma^2_{francais} \\
-						... & ... & ...
+						\sigma^2_{math}/\sigma^2_{math} & cov(math,musique)/\sigma^2_{musique}& cov(math,français)/\sigma^2_{français} \\
+						cov(math,musique)/\sigma^2_{math} & \sigma^2_{musique}/\sigma^2_{musique}& cov(musique,français)/\sigma^2_{français} \\
+						cov(math,francais)//\sigma^2_{math} & cov(musique,français)/\sigma^2_{musique}& \sigma^2_{francais}/\sigma^2_{français} \\
 						\end{pmatrix}
 						$$
 					</li>
