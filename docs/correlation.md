@@ -1,22 +1,22 @@
-
-
+<!-- .slide: class="slide" -->
 # Notations et calcul
-<script type="text/javascript" id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-<script>
-    window.MathJax = {
-        tex: {
-            inlineMath: [['$', '$'], ['\\(', '\\)']]
-        }
-    };
-</script>
+
 $Y$ Données centrées
+
+Pondération $P$
 
 $V=Y^TPY$ Matrice de variance-covariance
 
 $M_{IV}$ Métrique inverse des variance
 
+
+
+
+
+
+
+
+<!-- .slide: class="slide" -->
 $$
 M_{IV}=
 \begin{pmatrix}
@@ -38,10 +38,25 @@ $$
 $M^{1/2}_{IV}VM^{1/2}_{IV}$ Matrice de corrélation
 
 
+
+
+
+
+
+
+
+<!-- .slide: class="slide" -->
 # ACP normée
 
-- Pondération P
 
+
+
+
+
+
+
+
+<!-- .slide: class="slide" -->
 ## Point de vue métrique inverse des variances
 
 - Données : $Y$
@@ -60,6 +75,15 @@ $$
 = \frac{1}{\sigma^2_{math}} y_{i,math}^2 + \frac{1}{\sigma^2_{musique}} y_{i,musique}^2 + \frac{1}{\sigma^2_{français}} y_{i,français}^2 
 $$
 
+
+
+
+
+
+
+
+
+<!-- .slide: class="slide" -->
 ## Point de vue utilisation des données réduites
 
 - Données : $Z=YM_{IV}^{1/2}$
