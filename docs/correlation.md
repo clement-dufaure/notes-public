@@ -1,3 +1,6 @@
+
+
+# Notations et calcul
 <script type="text/javascript" id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -8,9 +11,6 @@
         }
     };
 </script>
-
-# Notations et calcul
-
 $Y$ Données centrées
 
 $V=Y^TPY$ Matrice de variance-covariance
