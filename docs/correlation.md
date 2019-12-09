@@ -13,18 +13,29 @@ $M_{IV}$ Métrique inverse des variance
 
 
 
+<!-- .slide: class="slide" -->
+\begin{aligned}
+\dot{x} &amp; = \sigma(y-x) \\
+\dot{y} &amp; = \rho x - y - xz \\
+\dot{z} &amp; = -\beta z + xy
+\end{aligned}
+
+
+
+
+
 
 
 
 <!-- .slide: class="slide" -->
-$$
+
 M_{IV}=
 \begin{pmatrix}
 1/\sigma^2_{math} & 0 & 0 \\
 0 & 1/\sigma^2_{musique} & 0 \\
 0 & 0 &1/\sigma^2_{français}
 \end{pmatrix}
-$$
+
 
 $$
 M^{1/2}_{IV}=
