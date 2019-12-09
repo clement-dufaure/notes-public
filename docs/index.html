@@ -104,7 +104,21 @@
 				<ul>
 					<li>Données : `Z=YM_{IV}^{1/2}`</li>
 					<li>Métrique : `I_3` </li>
-					<li>Matrice d'inertie : `Z^TPZI_3 = M_{IV}^{1/2}Y^TPYM_{IV}^{1/2}` : matrice de corrélation</li>
+					<li>Matrice d'inertie : `Z^TPZI_3 = M_{IV}^{1/2}Y^TPYM_{IV}^{1/2}` : matrice de corrélation
+						\begin{pmatrix} \sigma^2_{math}/\sigma^2_{math} &
+						\frac{cov(math,musique)}{\sigma_{math}\sigma_{musique}} &
+						\frac{cov(math,français)}{\sigma_{math}\sigma_{français}} \\
+						\frac{cov(math,musique)}{\sigma_{math}\sigma_{musique}} & \sigma^2_{musique}/\sigma^2_{musique}&
+						\frac{cov(musique,français)}{\sigma_{musique}\sigma_{français}} \\
+						\frac{cov(math,français)}{\sigma_{math}\sigma_{français}} &
+						\frac{cov(musique,français)}{\sigma_{musique}\sigma_{français}}&
+						\sigma^2_{francais}/\sigma^2_{français} \\
+						\end{pmatrix}
+					</li>
+				</ul>
+			</section>
+			<section>
+				<ul>
 					<li>Distances : `z_i^TI_3z_i = (M_{IV}^{1/2}y_i)^T(M_{IV}^{1/2}y_i)=y_i^TM_{IV}y_i`
 						$$
 						= \left(\frac{1}{\sigma_{math}} y_{i,math}\right)^2 + \left(\frac{1}{\sigma_{musique}}
