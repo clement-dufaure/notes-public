@@ -616,7 +616,7 @@ p(x_i;\theta) = \sum_{k=1}^K \pi_k p_k(x_i;\lambda_k)
 $$
 ici :
 $$
-p(x_i;\theta) = \sum_{k=1}^K \pi_k \frac{{\lambda_k}^{x_i}}{x_i!}e^{-\lambda_k}
+p(x_i;\theta) = \sum_{k=1}^K \pi_k \frac{ {\lambda_k}^{x_i}}{x_i!}e^{-\lambda_k}
 $$
 Les $\lambda_k$ sont positifs, et différents 2 à 2 (si 2 sont identiques, c'est la même composante)
 
@@ -633,13 +633,13 @@ $$
 p(x,\theta)=p(x,\tilde \theta)
 $$
 $$
-\iff \sum_{k=1}^K \pi_k \frac{{\lambda_k}^{x_i}}{x_i!}e^{-\lambda_k}=\sum_{k=1}^K \tilde \pi_k \frac{{\tilde \lambda_k}^{x_i}}{x_i!}e^{-\tilde \lambda_k}
+\iff \sum_{k=1}^K \pi_k \frac{ {\lambda_k}^{x_i}}{x_i!}e^{-\lambda_k}=\sum_{k=1}^K \tilde \pi_k \frac{ {\tilde \lambda_k}^{x_i}}{x_i!}e^{-\tilde \lambda_k}
 $$
 $$
-\iff \pi_1 \frac{{\lambda_1}^{x_i}}{x_i!}e^{-\lambda_1} + \sum_{k=2}^K \pi_k \frac{{\lambda_k}^{x_i}}{x_i!}e^{-\lambda_k}=\tilde \pi_1 \frac{{\tilde \lambda_1}^{x_i}} {x_i!}e^{-\tilde \lambda_1} + \sum_{k=2}^K \tilde \pi_k \frac{{\tilde \lambda_k}^{x_i}}{x_i!}e^{-\tilde \lambda_k}
+\iff \pi_1 \frac{ {\lambda_1}^{x_i}}{x_i!}e^{-\lambda_1} + \sum_{k=2}^K \pi_k \frac{ {\lambda_k}^{x_i}}{x_i!}e^{-\lambda_k}=\tilde \pi_1 \frac{ {\tilde \lambda_1}^{x_i}} {x_i!}e^{-\tilde \lambda_1} + \sum_{k=2}^K \tilde \pi_k \frac{ {\tilde \lambda_k}^{x_i}}{x_i!}e^{-\tilde \lambda_k}
 $$
 $$
-\iff 1 + \sum_{k=2}^K \frac{\pi_k}{\pi_1} \frac{{\lambda_k}^{x_i}}{{\lambda_1}^{x_i}}e^{\lambda_1-\lambda_k}=\frac{\tilde \pi_1}{\pi_1} \frac{{\tilde \lambda_1}^{x_i}}{{\lambda_1}^{x_i}}e^{\lambda_1 - \tilde \lambda_1} + \sum_{k=2}^K \frac{\tilde \pi_k}{\pi_1} \frac{{\tilde \lambda_k}^{x_i}}{{\lambda_1}^{x_i}}e^{\lambda_1-\tilde \lambda_k}
+\iff 1 + \sum_{k=2}^K \frac{\pi_k}{\pi_1} \frac{ {\lambda_k}^{x_i}}{ {\lambda_1}^{x_i}}e^{\lambda_1-\lambda_k}=\frac{\tilde \pi_1}{\pi_1} \frac{ {\tilde \lambda_1}^{x_i}}{ {\lambda_1}^{x_i}}e^{\lambda_1 - \tilde \lambda_1} + \sum_{k=2}^K \frac{\tilde \pi_k}{\pi_1} \frac{ {\tilde \lambda_k}^{x_i}}{ {\lambda_1}^{x_i}}e^{\lambda_1-\tilde \lambda_k}
 $$
 Par hypothèse, on a $\lambda_1>\lambda_k$ et $\lambda_1 \geq \tilde \lambda_1 > \tilde \lambda_k$
 Donc :
@@ -651,14 +651,14 @@ $\forall k>1,\lim_{x\to\infty}\frac{\pi_k}{\pi_1}(\frac{\tilde \lambda_k}{\lambd
 
 Soit en revenant à l'égalité précédente
 $$
-\iff 1 = \lim_{x\to\infty}\frac{\tilde \pi_1}{\pi_1} \frac{{\tilde \lambda_1}^{x_i}}{{\lambda_1}^{x_i}}e^{\lambda_1 - \tilde \lambda_1} 
+\iff 1 = \lim_{x\to\infty}\frac{\tilde \pi_1}{\pi_1} \frac{ {\tilde \lambda_1}^{x_i}}{ {\lambda_1}^{x_i}}e^{\lambda_1 - \tilde \lambda_1} 
 $$
 et
 $$
-\lim_{x\to\infty} \frac{\tilde \pi_1}{\pi_1} \frac{{\tilde \lambda_1}^{x_i}}{{\lambda_1}^{x_i}}e^{\lambda_1 - \tilde \lambda_1} = \frac{\tilde \pi_1}{\pi_1} \text{ si } \lambda_1 = \tilde \lambda_1
+\lim_{x\to\infty} \frac{\tilde \pi_1}{\pi_1} \frac{ {\tilde \lambda_1}^{x_i}}{ {\lambda_1}^{x_i}}e^{\lambda_1 - \tilde \lambda_1} = \frac{\tilde \pi_1}{\pi_1} \text{ si } \lambda_1 = \tilde \lambda_1
 $$
 $$
-\lim_{x\to\infty} \frac{\tilde \pi_1}{\pi_1} \frac{{\tilde \lambda_1}^{x_i}}{{\lambda_1}^{x_i}}e^{\lambda_1 - \tilde \lambda_1} = 0\text{ si } \lambda_1 > \tilde \lambda_1
+\lim_{x\to\infty} \frac{\tilde \pi_1}{\pi_1} \frac{ {\tilde \lambda_1}^{x_i}}{ {\lambda_1}^{x_i}}e^{\lambda_1 - \tilde \lambda_1} = 0\text{ si } \lambda_1 > \tilde \lambda_1
 $$
 
 Donc (par l'absurde) $\lambda_1 = \tilde \lambda_1$ et de fait $\pi_1 = \tilde \pi_1$
